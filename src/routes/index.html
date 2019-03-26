@@ -1,0 +1,17 @@
+<svelte:head>
+	<title>Neopix Issue Template</title>
+</svelte:head>
+<Editor query="{query}" ref="{ref}" />
+
+<script>
+	import Editor from '../components/Editor.svelte';
+
+	export default {
+		components: {
+			Editor
+		},
+		preload({query}) {
+			return { query }
+		}
+	}
+</script>
