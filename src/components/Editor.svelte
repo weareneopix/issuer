@@ -111,7 +111,8 @@ ${expected}
       .editor__form,
        .editor__preview {
             width: 100%;
-            overflow-y: visible;
+            flex-basis: auto;
+            overflow-x: auto;
       }
   }
 
