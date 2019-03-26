@@ -1,8 +1,9 @@
 {
 	"background_color": "#222222",
 	"theme_color": "#A68F6B",
-	"name": "Issuer",
-	"short_name": "This is an internal tool used by awesome people at Neopix. It helps them write issues for products they work on.",
+	"name": "Neopix Issuer",
+	"short_name": "Issuer",
+	"description": "This is an internal tool used by awesome people at Neopix. It helps them write issues for products they work on.",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
