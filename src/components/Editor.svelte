@@ -3,7 +3,7 @@
     {#if !usingBookmarklet }
         <div class="note">
         <p>
-        You are not using a bookmarklet. Please use this  <a href="javascript:(function()%7B(function%20bookmarklet()%20%7Bwindow.location%20%3D%20'https%3A%2F%2Fissue-reporter.ilicmarko05.now.sh%2F%3Fuser-agent%3D'%20%2B%20encodeURIComponent(window.navigator.userAgent)%20%2B%20'%26resolution%3D'%20%2B%20screen.width%20%2B%20'x'%20%2B%20screen.height%3B%7D())%7D)()"> Report issue </a>
+        You are not using a bookmarklet. Please use this  <a href="javascript:(function()%7B(function%20bookmarklet()%20%7Bwindow.location%20%3D%20'https%3A%2F%2Fissue-reporter.ilicmarko05.now.sh%2F%3Fua%3D'%2B%20encodeURIComponent(window.navigator.userAgent)%2B%20'%26r%3D'%20%2B%20screen.width%20%2B%20'x'%20%2B%20screen.height%2B%20'%26l%3D'%20%2B%20encodeURIComponent(window.location.href)%3B%7D())%7D)()"> Report issue </a>
          bookmarklet.</p>
         </div>
     {/if}
@@ -67,8 +67,9 @@ ${expected}
           }
       },
       computed: {
-        userAgent: ({ query }) => typeof query['user-agent'] ? query['user-agent'] : false,
-        resolution: ({ query }) => typeof query['resolution'] ? query['resolution'] : false,
+        userAgent: ({ query }) => typeof query['ua'] ? query['ua'] : false,
+        resolution: ({ query }) => typeof query['r'] ? query['r'] : false,
+        ref: ({ query }) => typeof query['l'] ? query['l'] : false,
         usingBookmarklet: ({ userAgent, resolution }) => userAgent && resolution,
         browser: ({ usingBookmarklet, userAgent }) => usingBookmarklet ? Bowser.parse(userAgent) : null,
         output: ({ userAgent, resolution, description, expected, usingBookmarklet, browser, ref }) => template(userAgent, resolution, description, expected, usingBookmarklet, browser, ref),
