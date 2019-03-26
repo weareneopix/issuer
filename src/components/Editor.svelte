@@ -134,7 +134,7 @@ ${expected}
     font-size: 14px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    color: #909399;
+    color: #474748;
     background: #f4f4f5;
   }
 
@@ -164,7 +164,7 @@ ${expected}
 
    .note {
        background-color: #fdf6ec;
-       color: #e6a23c;
+       color: #6d4100;
        width: 100%;
        padding: 8px 16px;
        border-radius: 4px;
