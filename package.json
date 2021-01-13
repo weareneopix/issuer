@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "@weareneopix/issuer",
+  "description": "This is an internal tool used by awesome folks at Neopix. It helps them write issues for products they work on.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

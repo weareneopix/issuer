@@ -2,9 +2,10 @@
   <div class="editor__form">
     {#if !usingBookmarklet }
         <div class="note">
-        <p>
-        You are not using a bookmarklet. Please use this  <a href="javascript:(function()%7B(function%20bookmarklet()%20%7Bwindow.location%20%3D%20'https%3A%2F%2Fissue-reporter.ilicmarko05.now.sh%2F%3Fua%3D'%2B%20encodeURIComponent(window.navigator.userAgent)%2B%20'%26r%3D'%20%2B%20screen.width%20%2B%20'x'%20%2B%20screen.height%2B%20'%26l%3D'%20%2B%20encodeURIComponent(window.location.href)%3B%7D())%7D)()"> Report issue </a>
-         bookmarklet.</p>
+            <p>
+            You are not using a bookmarklet. Please use this  <a href="javascript:(function()%7B(function%20bookmarklet()%20%7Bwindow.location%20%3D%20'https%3A%2F%2Fissue-reporter.ilicmarko05.now.sh%2F%3Fua%3D'%2B%20encodeURIComponent(window.navigator.userAgent)%2B%20'%26r%3D'%20%2B%20screen.width%20%2B%20'x'%20%2B%20screen.height%2B%20'%26l%3D'%20%2B%20encodeURIComponent(window.location.href)%3B%7D())%7D)()"> Report issue </a>
+             bookmarklet.</p>
+             <p>Drag the above link into your bookmark bar.</p>
         </div>
     {/if}
 
@@ -104,6 +105,17 @@ ${expected}
     overflow-y: auto;
   }
 
+  @media (max-width: 1024px) {
+      .editor { flex-direction: column; }
+
+      .editor__form,
+       .editor__preview {
+            width: 100%;
+            flex-basis: auto;
+            overflow-x: auto;
+      }
+  }
+
   .editor__form {
     border-right: 1px solid var(--border-color);
   }
@@ -123,7 +135,7 @@ ${expected}
     font-size: 14px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    color: #909399;
+    color: #474748;
     background: #f4f4f5;
   }
 
@@ -153,12 +165,10 @@ ${expected}
 
    .note {
        background-color: #fdf6ec;
-       color: #e6a23c;
+       color: #6d4100;
        width: 100%;
        padding: 8px 16px;
        border-radius: 4px;
-       display: flex;
-       align-items: center;
        transition: opacity .2s;
        margin-bottom: 3em;
    }
